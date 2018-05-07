@@ -1,4 +1,4 @@
-package: github.com/elastic/beats
+package: github.com/rwdial/beats
 import:
 - package: github.com/garyburd/redigo
 - package: gopkg.in/yaml.v2
