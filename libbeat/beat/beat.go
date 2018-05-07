@@ -31,10 +31,10 @@ import (
 	"github.com/satori/go.uuid"
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/cfgfile"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/publisher"
-	"github.com/elastic/beats/libbeat/service"
+	"github.com/rwdial/beats/libbeat/cfgfile"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/publisher"
+	"github.com/rwdial/beats/libbeat/service"
 )
 
 // Beater interface that every beat must use
