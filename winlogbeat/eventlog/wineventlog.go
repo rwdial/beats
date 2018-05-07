@@ -5,10 +5,10 @@ package eventlog
 import (
 	"fmt"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/winlogbeat/sys"
-	win "github.com/elastic/beats/winlogbeat/sys/wineventlog"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/winlogbeat/sys"
+	win "github.com/rwdial/beats/winlogbeat/sys/wineventlog"
 	"golang.org/x/sys/windows"
 )
 

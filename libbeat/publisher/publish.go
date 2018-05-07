@@ -10,17 +10,17 @@ import (
 	"github.com/nranchev/go-libGeoIP"
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/outputs"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/outputs"
 
 	// load supported output plugins
-	_ "github.com/elastic/beats/libbeat/outputs/console"
-	_ "github.com/elastic/beats/libbeat/outputs/elasticsearch"
-	_ "github.com/elastic/beats/libbeat/outputs/fileout"
-	_ "github.com/elastic/beats/libbeat/outputs/kafka"
-	_ "github.com/elastic/beats/libbeat/outputs/logstash"
-	_ "github.com/elastic/beats/libbeat/outputs/redis"
+	_ "github.com/rwdial/beats/libbeat/outputs/console"
+	_ "github.com/rwdial/beats/libbeat/outputs/elasticsearch"
+	_ "github.com/rwdial/beats/libbeat/outputs/fileout"
+	_ "github.com/rwdial/beats/libbeat/outputs/kafka"
+	_ "github.com/rwdial/beats/libbeat/outputs/logstash"
+	_ "github.com/rwdial/beats/libbeat/outputs/redis"
 )
 
 // command line flags

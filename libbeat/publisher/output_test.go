@@ -7,8 +7,8 @@ import (
 
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/outputs"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/outputs"
 	"github.com/stretchr/testify/assert"
 )
 

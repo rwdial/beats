@@ -8,7 +8,7 @@ import (
 
 	"github.com/urso/ucfg/yaml"
 
-	cfg "github.com/elastic/beats/filebeat/config"
+	cfg "github.com/rwdial/beats/filebeat/config"
 	"github.com/stretchr/testify/assert"
 )
 

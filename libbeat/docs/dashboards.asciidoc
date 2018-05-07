@@ -4,7 +4,7 @@
 Kibana has a large set of visualization types that you can combine to create
 the perfect dashboards for your needs. But this flexibility can be a bit
 overwhelming at the beginning, so we have created a couple of
-https://github.com/elastic/beats-dashboards[Sample Dashboards] to get you
+https://github.com/rwdial/beats-dashboards[Sample Dashboards] to get you
 started and to demonstrate what is possible based on the Beats data.
 
 NOTE: The Beats dashboards require Kibana 4.

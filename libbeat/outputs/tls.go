@@ -6,7 +6,7 @@ import (
 	"errors"
 	"io/ioutil"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 var (

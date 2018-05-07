@@ -45,7 +45,7 @@ You don't need to submit the code to this repository. Most new Beats start in
 their own repository and just make use of the libbeat packages. After you have
 a working Beat that you'd like to share with others, open a PR to add it to our
 list of [community
-Beats](https://github.com/elastic/beats/blob/master/libbeat/docs/communitybeats.asciidoc).
+Beats](https://github.com/rwdial/beats/blob/master/libbeat/docs/communitybeats.asciidoc).
 
 ## Setting up your dev environment
 
@@ -62,7 +62,7 @@ simply set it to your home directory (`export GOPATH=$HOME`).
 
     $ mkdir -p $GOPATH/src/github.com/elastic
     $ cd $GOPATH/src/github.com/elastic
-    $ git clone https://github.com/elastic/beats.git
+    $ git clone https://github.com/rwdial/beats.git
 
 Then you can compile a particular Beat by using the Makefile. For example, for
 Packetbeat:

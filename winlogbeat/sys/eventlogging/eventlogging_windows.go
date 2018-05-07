@@ -10,8 +10,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/winlogbeat/sys"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/winlogbeat/sys"
 	"golang.org/x/sys/windows"
 	"golang.org/x/sys/windows/registry"
 )

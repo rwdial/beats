@@ -5,10 +5,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/elastic/beats/filebeat/input"
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/publisher"
+	"github.com/rwdial/beats/filebeat/input"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/publisher"
 )
 
 type logPublisher interface {

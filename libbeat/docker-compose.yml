@@ -12,7 +12,7 @@ beat:
     - LS_TCP_PORT=5044
     - LS_TLS_PORT=5055
     # Setup work environment
-    - LIBBEAT_PATH=/go/src/github.com/elastic/beats/libbeat
+    - LIBBEAT_PATH=/go/src/github.com/rwdial/beats/libbeat
     # TODO: Set to true as soon as stable release is out
     - SHIELD=false
     - KAFKA_HOST=kafka
@@ -20,10 +20,10 @@ beat:
   env_file:
     - build/test.env
   volumes:
-    - ..:/go/src/github.com/elastic/beats/
-  working_dir: /go/src/github.com/elastic/beats/libbeat
+    - ..:/go/src/github.com/rwdial/beats/
+  working_dir: /go/src/github.com/rwdial/beats/libbeat
   command: make
-  entrypoint: /go/src/github.com/elastic/beats/libbeat/scripts/docker-entrypoint.sh
+  entrypoint: /go/src/github.com/rwdial/beats/libbeat/scripts/docker-entrypoint.sh
 elasticsearch:
   build: ../testing/environments/docker/elasticsearch
   dockerfile: Dockerfile-2.2.0-shield

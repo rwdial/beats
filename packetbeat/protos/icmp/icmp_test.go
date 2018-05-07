@@ -7,12 +7,12 @@ import (
 	"net"
 	"testing"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/packetbeat/protos"
-	"github.com/elastic/beats/packetbeat/publish"
+	"github.com/rwdial/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/publish"
 
 	"github.com/tsg/gopacket"
 	"github.com/tsg/gopacket/layers"

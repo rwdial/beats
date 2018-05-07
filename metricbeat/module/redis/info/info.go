@@ -125,10 +125,10 @@ import (
 
 	rd "github.com/garyburd/redigo/redis"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 
-	"github.com/elastic/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/helper"
 )
 
 func init() {

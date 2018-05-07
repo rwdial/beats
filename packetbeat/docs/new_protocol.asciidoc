@@ -30,7 +30,7 @@ implementation with a liberal enough license, you might be able to use it to
 parse and decode individual messages instead of writing your own parser.
 
 Before starting, please also read the
-https://github.com/elastic/beats/blob/master/packetbeat/CONTRIBUTING.md[CONTRIBUTING]
+https://github.com/rwdial/beats/blob/master/packetbeat/CONTRIBUTING.md[CONTRIBUTING]
 file on GitHub.
 
 [float]
@@ -45,7 +45,7 @@ following commands:
 ----------------------------------------------------------------------
 $ mkdir -p $GOPATH/src/github.com/elastic
 $ cd $GOPATH/src/github.com/elastic
-$ git clone https://github.com/elastic/beats.git
+$ git clone https://github.com/rwdial/beats.git
 ----------------------------------------------------------------------
 
 Then you can compile it with:
@@ -67,7 +67,7 @@ We recommend the following work flow for contributing to Packetbeat:
 
 * Fork Beats in GitHub to your own account
 
-* In the `$GOPATH/src/github.com/elastic/beats` folder, add your fork
+* In the `$GOPATH/src/github.com/rwdial/beats` folder, add your fork
   as a new remote. For example (replace `tsg` with your GitHub account):
 
 [source,shell]
@@ -99,7 +99,7 @@ $ git push --set-upstream tsg cool_new_protocol
 
 Packetbeat's source code is split up in Go packages or modules. The protocol
 modules can be found in individual folders in the `beats/packetbeat/protos` directory
-in the https://github.com/elastic/beats[Beats GitHub repository].
+in the https://github.com/rwdial/beats[Beats GitHub repository].
 
 Before starting, we recommend reading through the source code of some of the
 existing modules. For TCP based protocols, the MySQL or HTTP ones are good
@@ -174,7 +174,7 @@ combination.
 byte slice.
 
 The objects are sent using the `publisher.Client` interface defined in the
-`beats/libbeat/publisher` directory in the https://github.com/elastic/beats[Beats GitHub repository].
+`beats/libbeat/publisher` directory in the https://github.com/rwdial/beats[Beats GitHub repository].
 
 Besides the `Parse()` function, the TCP layer also calls the `ReceivedFin()` function
 when a TCP stream is closed, and it calls the `GapInStream()` function when packet
@@ -401,7 +401,7 @@ to Elasticsearch for indexing. You send the object by publishing it
 through the publisher client interface, which is received by the `Init`
 function. The publisher client accepts structures of type `common.MapStr`, which
 is essentially a `map[string]interface{}` with a few more convenience methods
-added (see the `beats/libbeat/common` package in the https://github.com/elastic/beats[Beats GitHub repository]).
+added (see the `beats/libbeat/common` package in the https://github.com/rwdial/beats[Beats GitHub repository]).
  
 As an example, here is the relevant code from the Redis module:
 
@@ -454,7 +454,7 @@ system tests:
 In libbeat you also find some helpers for implementing parsers for binary and
 text-based protocols. The `Bytes_*` functions are the most low-level helpers
 for binary protocols that use network byte order. These functions can be found in the
-`beats/libbeat/common` module in the https://github.com/elastic/beats[Beats GitHub repository].
+`beats/libbeat/common` module in the https://github.com/rwdial/beats[Beats GitHub repository].
 In addition to these very low-level helpers, a stream
 buffer for parsing TCP-based streams, or simply UDP packets with integrated
 error handling, is provided by `beats/libbeat/common/streambuf`. The following example
@@ -581,7 +581,7 @@ https://github.com/stretchr/testify[testify] library.
 For parser and decoder tests, it's a good practice to have an array with
 test cases containing the inputs and expected outputs. For an example, see the
 `Test_splitCookiesHeader` unit test in `beats/packetbeat/protos/http/http_test.go`
-in the https://github.com/elastic/beats[Beats GitHub repository].
+in the https://github.com/rwdial/beats[Beats GitHub repository].
 
 You can also have unit tests that treat the whole module as a black box, calling
 its interface functions, then reading the result and checking it. This pattern 
@@ -659,7 +659,7 @@ files as input and checking the results in the files created by using the "file"
 output plugin.
 
 This is the approach taken by the tests in the `beats/packetbeat/tests/system` directory
-in the https://github.com/elastic/beats[Beats GitHub repository]. The
+in the https://github.com/rwdial/beats[Beats GitHub repository]. The
 tests are written in Python and executed using
 https://nose.readthedocs.org/en/latest/[nose]. Here is a simple example test
 from the MongoDB suite:

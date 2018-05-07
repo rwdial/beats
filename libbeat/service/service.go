@@ -10,7 +10,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 
 	"net/http"
 	_ "net/http/pprof"

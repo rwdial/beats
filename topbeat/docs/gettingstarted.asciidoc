@@ -197,7 +197,7 @@ On Windows, if you don't have cURL installed, simply point your browser to the U
 
 To make it easier for you to start monitoring your servers in Kibana,
 we have created a few sample dashboards. The dashboards are maintained in this
-https://github.com/elastic/beats-dashboards[GitHub repository], which also
+https://github.com/rwdial/beats-dashboards[GitHub repository], which also
 includes instructions for loading the dashboards.
 
 For more information about loading and viewing the dashboards, see {libbeat}/visualizing-data.html[Visualizing Your Data in Kibana].

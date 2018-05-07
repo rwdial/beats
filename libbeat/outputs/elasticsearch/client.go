@@ -15,9 +15,9 @@ import (
 
 	"github.com/dustin/go-humanize"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/outputs/mode"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/outputs/mode"
 )
 
 // Metrics that can retrieved through the expvar web interface.

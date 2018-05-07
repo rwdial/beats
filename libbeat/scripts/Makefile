@@ -2,7 +2,7 @@
 ### VARIABLE SETUP ###
 
 BEATNAME?=libbeat
-BEAT_DIR?=github.com/elastic/beats
+BEAT_DIR?=github.com/rwdial/beats
 ES_BEATS?=..
 GOPACKAGES?=${BEAT_DIR}/${BEATNAME}/...
 
@@ -10,13 +10,13 @@ GOPACKAGES?=${BEAT_DIR}/${BEATNAME}/...
 # if glide is used to manage vendor dependencies,
 #     BEATNAME=mybeat
 #     BEAT_DIR=github.com/mybeat
-#     ES_BEATS=./vendor/github.com/elastic/beats
+#     ES_BEATS=./vendor/github.com/rwdial/beats
 #     GOPACKAGES=$(shell glide novendor)
 #     include $(ES_BEATS)/libbeat/scripts/Makefile
 # else
 #     BEATNAME=mybeat
 #     BEAT_DIR=github.com/mybeat
-#     ES_BEATS=$(GOPATH)/src/github.com/elastic/beats
+#     ES_BEATS=$(GOPATH)/src/github.com/rwdial/beats
 #     GOPACKAGES=$(shell go list ${BEAT_DIR}/... | grep -v /vendor/)
 #     include $(ES_BEATS)/libbeat/scripts/Makefile
 

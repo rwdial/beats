@@ -1,8 +1,8 @@
 package helper
 
 import (
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 func getIndex(event common.MapStr, indexName string) string {

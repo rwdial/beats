@@ -20,7 +20,7 @@
 SRC_FOLDER=$SOURCE
 DST_FOLDER=$GOPATH/src/$1
 
-if [ $1 = "github.com/elastic/beats" ]; then
+if [ $1 = "github.com/rwdial/beats" ]; then
         WORKING_DIRECTORY=$GOPATH/src/$1
 else
         WORKING_DIRECTORY=$GOPATH/src/`dirname $1`

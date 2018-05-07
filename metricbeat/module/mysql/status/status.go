@@ -13,11 +13,11 @@ package status
 import (
 	"database/sql"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 
-	"github.com/elastic/beats/metricbeat/helper"
-	"github.com/elastic/beats/metricbeat/module/mysql"
+	"github.com/rwdial/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/module/mysql"
 )
 
 func init() {

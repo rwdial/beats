@@ -3,7 +3,7 @@ package publisher
 import (
 	"expvar"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 )
 
 // Metrics that can retrieved through the expvar web interface.

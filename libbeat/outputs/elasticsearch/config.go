@@ -1,6 +1,6 @@
 package elasticsearch
 
-import "github.com/elastic/beats/libbeat/outputs"
+import "github.com/rwdial/beats/libbeat/outputs"
 
 type elasticsearchConfig struct {
 	Protocol     string             `config:"protocol"`

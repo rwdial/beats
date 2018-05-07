@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/common/streambuf"
-	"github.com/elastic/beats/libbeat/outputs/mode"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common/streambuf"
+	"github.com/rwdial/beats/libbeat/outputs/mode"
 )
 
 type testSyncDriver struct {

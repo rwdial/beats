@@ -11,7 +11,7 @@ if [ $BEATNAME = "packetbeat" ]; then
 	patch -p1 < /gopacket_pcap.patch
 fi
 
-if [ $BEATS_PATH = "/go/src/github.com/elastic/beats" ]; then
+if [ $BEATS_PATH = "/go/src/github.com/rwdial/beats" ]; then
     BEAT_PATH=$BEATS_PATH/$BEATNAME
 else
     BEAT_PATH=$BEATS_PATH

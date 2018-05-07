@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/elastic/beats/libbeat/cfgfile"
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/cfgfile"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // Defaults for config variables which are not set

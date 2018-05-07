@@ -6,7 +6,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 type FileStateOS struct {

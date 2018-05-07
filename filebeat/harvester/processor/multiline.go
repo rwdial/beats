@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/elastic/beats/filebeat/config"
+	"github.com/rwdial/beats/filebeat/config"
 )
 
 // MultiLine processor combining multiple line events into one multi-line event.

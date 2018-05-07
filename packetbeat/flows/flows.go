@@ -3,9 +3,9 @@ package flows
 import (
 	"time"
 
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/packetbeat/config"
-	"github.com/elastic/beats/packetbeat/publish"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/packetbeat/config"
+	"github.com/rwdial/beats/packetbeat/publish"
 )
 
 type Flows struct {

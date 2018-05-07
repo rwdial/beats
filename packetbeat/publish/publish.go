@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/publisher"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/publisher"
 )
 
 type Transactions interface {

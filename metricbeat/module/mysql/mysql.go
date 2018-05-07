@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"os"
 
-	"github.com/elastic/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/helper"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/urso/ucfg"

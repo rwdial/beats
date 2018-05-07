@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 
-	"github.com/elastic/beats/metricbeat/helper"
-	_ "github.com/elastic/beats/metricbeat/module/apache"
+	"github.com/rwdial/beats/metricbeat/helper"
+	_ "github.com/rwdial/beats/metricbeat/module/apache"
 )
 
 func init() {

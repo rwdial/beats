@@ -5,7 +5,7 @@ import (
 
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/helper"
 )
 
 func init() {

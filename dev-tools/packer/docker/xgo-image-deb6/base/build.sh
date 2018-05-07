@@ -17,7 +17,7 @@
 
 # Download the canonical import path (may fail, don't allow failures beyond)
 
-if [ $1 = "github.com/elastic/beats" ]; then
+if [ $1 = "github.com/rwdial/beats" ]; then
         SRC_FOLDER=$SOURCE
         DST_FOLDER=$GOPATH/src/$1
         WORKING_DIRECTORY=$GOPATH/src/$1

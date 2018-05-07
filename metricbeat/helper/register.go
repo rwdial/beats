@@ -5,7 +5,7 @@ import (
 
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // Global register for moduler and metricseter

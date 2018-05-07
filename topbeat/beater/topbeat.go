@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/elastic/beats/libbeat/beat"
-	"github.com/elastic/beats/libbeat/cfgfile"
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/publisher"
+	"github.com/rwdial/beats/libbeat/beat"
+	"github.com/rwdial/beats/libbeat/cfgfile"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/publisher"
 	sigar "github.com/elastic/gosigar"
 )
 

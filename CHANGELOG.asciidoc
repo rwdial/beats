@@ -1,14 +1,14 @@
 
 // Use these for links to issue and pulls. Note issues and pulls redirect one to
 // each other on Github, so don't worry too much on using the right prefix.
-:issue: https://github.com/elastic/beats/issues/
-:pull: https://github.com/elastic/beats/pull/
+:issue: https://github.com/rwdial/beats/issues/
+:pull: https://github.com/rwdial/beats/pull/
 
 ////////////////////////////////////////////////////////////
 // Template, add newest changes here
 
 === Beats version HEAD
-https://github.com/elastic/beats/compare/v1.1.2...master[Check the HEAD diff]
+https://github.com/rwdial/beats/compare/v1.1.2...master[Check the HEAD diff]
 
 ==== Breaking changes
 
@@ -118,7 +118,7 @@ https://github.com/elastic/beats/compare/v1.1.2...master[Check the HEAD diff]
 
 [[release-notes-1.1.2]]
 === Beats version 1.1.2
-https://github.com/elastic/beats/compare/v1.1.1...v1.1.2[View commits]
+https://github.com/rwdial/beats/compare/v1.1.1...v1.1.2[View commits]
 
 ==== Bugfixes
 
@@ -129,7 +129,7 @@ https://github.com/elastic/beats/compare/v1.1.1...v1.1.2[View commits]
 
 [[release-notes-1.1.1]]
 === Beats version 1.1.1
-https://github.com/elastic/beats/compare/v1.1.0...v1.1.1[View commits]
+https://github.com/rwdial/beats/compare/v1.1.0...v1.1.1[View commits]
 
 ==== Bugfixes
 
@@ -140,7 +140,7 @@ https://github.com/elastic/beats/compare/v1.1.0...v1.1.1[View commits]
 
 [[release-notes-1.1.0]]
 === Beats version 1.1.0
-https://github.com/elastic/beats/compare/v1.0.1...v1.1.0[View commits]
+https://github.com/rwdial/beats/compare/v1.0.1...v1.1.0[View commits]
 
 ==== Bugfixes
 
@@ -200,7 +200,7 @@ https://github.com/elastic/beats/compare/v1.0.1...v1.1.0[View commits]
 
 [[release-notes-1.0.1]]
 === Beats version 1.0.1
-https://github.com/elastic/beats/compare/v1.0.0...v1.0.1[Check 1.0.1 diff]
+https://github.com/rwdial/beats/compare/v1.0.0...v1.0.1[Check 1.0.1 diff]
 
 ==== Bugfixes
 
@@ -219,7 +219,7 @@ https://github.com/elastic/beats/compare/v1.0.0...v1.0.1[Check 1.0.1 diff]
 
 [[release-notes-1.0.0]]
 === Beats version 1.0.0
-https://github.com/elastic/beats/compare/1.0.0-rc2...1.0.0[Check 1.0.0 diff]
+https://github.com/rwdial/beats/compare/1.0.0-rc2...1.0.0[Check 1.0.0 diff]
 
 ==== Breaking changes
 
@@ -246,7 +246,7 @@ https://github.com/elastic/beats/compare/1.0.0-rc2...1.0.0[Check 1.0.0 diff]
 
 [[release-notes-1.0.0-rc2]]
 === Beats version 1.0.0-rc2
-https://github.com/elastic/beats/compare/1.0.0-rc1...1.0.0-rc2[Check 1.0.0-rc2
+https://github.com/rwdial/beats/compare/1.0.0-rc1...1.0.0-rc2[Check 1.0.0-rc2
 diff]
 
 ==== Breaking changes
@@ -312,7 +312,7 @@ diff]
 
 [[release-notes-1.0.0-rc1]]
 === Beats version 1.0.0-rc1
-https://github.com/elastic/beats/compare/1.0.0-beta4...1.0.0-rc1[Check
+https://github.com/rwdial/beats/compare/1.0.0-beta4...1.0.0-rc1[Check
 1.0.0-rc1 diff]
 
 ==== Breaking changes
@@ -408,7 +408,7 @@ level in the output dictionary. #188
 
 [[release-notes-1.0.0-beta4]]
 === Beats version 1.0.0-beta4
-https://github.com/elastic/beats/compare/1.0.0-beta3...1.0.0-beta4[Check
+https://github.com/rwdial/beats/compare/1.0.0-beta3...1.0.0-beta4[Check
 1.0.0-beta4 diff]
 
 

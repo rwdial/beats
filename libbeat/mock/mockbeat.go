@@ -1,7 +1,7 @@
 package mock
 
 import (
-	"github.com/elastic/beats/libbeat/beat"
+	"github.com/rwdial/beats/libbeat/beat"
 )
 
 ///*** Mock Beat Setup ***///

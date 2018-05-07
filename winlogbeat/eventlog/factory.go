@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 )
 
 // Config is the configuration data used to instantiate a new EventLog.

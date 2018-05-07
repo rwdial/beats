@@ -1,10 +1,10 @@
 package config
 
 import (
-	"github.com/elastic/beats/libbeat/common/droppriv"
-	"github.com/elastic/beats/libbeat/logp"
-	"github.com/elastic/beats/libbeat/publisher"
-	"github.com/elastic/beats/packetbeat/procs"
+	"github.com/rwdial/beats/libbeat/common/droppriv"
+	"github.com/rwdial/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/publisher"
+	"github.com/rwdial/beats/packetbeat/procs"
 	"github.com/urso/ucfg"
 )
 

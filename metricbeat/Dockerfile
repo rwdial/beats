@@ -15,7 +15,7 @@ RUN set -x \
 	golang.org/x/tools/cmd/vet
 
 # Setup work environment
-ENV METRICBEAT_PATH /go/src/github.com/elastic/beats/metricbeat
+ENV METRICBEAT_PATH /go/src/github.com/rwdial/beats/metricbeat
 ENV GO15VENDOREXPERIMENT=1
 
 RUN mkdir -p $METRICBEAT_PATH/build/coverage

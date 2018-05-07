@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/common/streambuf"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common/streambuf"
+	"github.com/rwdial/beats/libbeat/logp"
 
 	"github.com/stretchr/testify/assert"
 )

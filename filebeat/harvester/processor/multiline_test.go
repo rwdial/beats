@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/beats/filebeat/config"
-	"github.com/elastic/beats/filebeat/harvester/encoding"
+	"github.com/rwdial/beats/filebeat/config"
+	"github.com/rwdial/beats/filebeat/harvester/encoding"
 	"github.com/stretchr/testify/assert"
 )
 

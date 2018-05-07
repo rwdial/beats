@@ -3,7 +3,7 @@ package helper
 import (
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 )
 
 // Metric specific data

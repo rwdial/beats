@@ -11,7 +11,7 @@ import (
 
 	"golang.org/x/net/proxy"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // TransportClient interfaces adds (re-)connect support to net.Conn.

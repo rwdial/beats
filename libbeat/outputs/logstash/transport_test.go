@@ -13,7 +13,7 @@ import (
 	"github.com/armon/go-socks5"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/elastic/beats/libbeat/outputs"
+	"github.com/rwdial/beats/libbeat/outputs"
 )
 
 type mockServer struct {

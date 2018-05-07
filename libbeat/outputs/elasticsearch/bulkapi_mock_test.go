@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 func TestOneHostSuccessResp_Bulk(t *testing.T) {

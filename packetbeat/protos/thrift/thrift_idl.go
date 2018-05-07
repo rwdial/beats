@@ -3,7 +3,7 @@ package thrift
 import (
 	"fmt"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 
 	"github.com/samuel/go-thrift/parser"
 )

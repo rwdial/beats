@@ -3,11 +3,11 @@ package udp
 import (
 	"fmt"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 
-	"github.com/elastic/beats/packetbeat/flows"
-	"github.com/elastic/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/flows"
+	"github.com/rwdial/beats/packetbeat/protos"
 )
 
 type Udp struct {

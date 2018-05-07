@@ -15,11 +15,11 @@ import (
 	"net"
 	"testing"
 
-	"github.com/elastic/beats/packetbeat/protos"
-	"github.com/elastic/beats/packetbeat/protos/tcp"
-	"github.com/elastic/beats/packetbeat/publish"
+	"github.com/rwdial/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/protos/tcp"
+	"github.com/rwdial/beats/packetbeat/publish"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 
 	"github.com/stretchr/testify/assert"
 )

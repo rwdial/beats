@@ -3,7 +3,7 @@ package helper
 import (
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/common"
 )
 
 // Base configuration for each module/metricsets combination

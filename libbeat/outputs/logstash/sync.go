@@ -5,8 +5,8 @@ import (
 	"expvar"
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // Metrics that can retrieved through the expvar web interface.

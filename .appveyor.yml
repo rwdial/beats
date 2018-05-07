@@ -68,7 +68,7 @@ test_script:
   # Unit tests
   - ps: Add-AppveyorTest "Unit Tests" -Outcome Running
   - mkdir build\coverage
-  - gotestcover -race -coverprofile=build/coverage/integration.cov github.com/elastic/beats/%BEAT%/...
+  - gotestcover -race -coverprofile=build/coverage/integration.cov github.com/rwdial/beats/%BEAT%/...
   - ps: Update-AppveyorTest "Unit Tests" -Outcome Passed
   # System tests
   - ps: Add-AppveyorTest "System tests" -Outcome Running

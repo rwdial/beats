@@ -1,8 +1,8 @@
 package mysql
 
 import (
-	"github.com/elastic/beats/packetbeat/config"
-	"github.com/elastic/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/config"
+	"github.com/rwdial/beats/packetbeat/protos"
 )
 
 type mysqlConfig struct {

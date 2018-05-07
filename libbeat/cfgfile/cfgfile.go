@@ -11,7 +11,7 @@ import (
 	"github.com/urso/ucfg"
 	"github.com/urso/ucfg/yaml"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // Command line flags

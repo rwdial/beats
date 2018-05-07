@@ -5,8 +5,8 @@ package crawler
 import (
 	"testing"
 
-	"github.com/elastic/beats/filebeat/config"
-	"github.com/elastic/beats/filebeat/input"
+	"github.com/rwdial/beats/filebeat/config"
+	"github.com/rwdial/beats/filebeat/input"
 	"github.com/stretchr/testify/assert"
 )
 

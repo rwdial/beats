@@ -5,13 +5,13 @@ package memcache
 import (
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 
-	"github.com/elastic/beats/packetbeat/procs"
-	"github.com/elastic/beats/packetbeat/protos"
-	"github.com/elastic/beats/packetbeat/protos/applayer"
-	"github.com/elastic/beats/packetbeat/protos/tcp"
+	"github.com/rwdial/beats/packetbeat/procs"
+	"github.com/rwdial/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/protos/applayer"
+	"github.com/rwdial/beats/packetbeat/protos/tcp"
 )
 
 type tcpMemcache struct {

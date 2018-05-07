@@ -3,7 +3,7 @@ package outputs
 import (
 	"sync/atomic"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 )
 
 // Signaler signals the completion of potentially asynchronous output operation.

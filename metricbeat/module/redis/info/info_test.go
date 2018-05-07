@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/metricbeat/helper"
-	"github.com/elastic/beats/metricbeat/module/redis"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/module/redis"
 )
 
 // Test Redis specific struct

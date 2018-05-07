@@ -1,6 +1,6 @@
 package icmp
 
-import "github.com/elastic/beats/packetbeat/protos"
+import "github.com/rwdial/beats/packetbeat/protos"
 
 type icmpConfig struct {
 	SendRequest        bool `config:"send_request"`

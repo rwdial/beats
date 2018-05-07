@@ -52,7 +52,7 @@ fmt:
 simplify:
 	$(foreach var,$(PROJECTS),$(MAKE) -C $(var) simplify || exit 1;)
 
-# Collects all dashboards and generates dashboard folder for https://github.com/elastic/beats-dashboards/tree/master/dashboards
+# Collects all dashboards and generates dashboard folder for https://github.com/rwdial/beats-dashboards/tree/master/dashboards
 .PHONY: beats-dashboards
 beats-dashboards:
 	mkdir -p build

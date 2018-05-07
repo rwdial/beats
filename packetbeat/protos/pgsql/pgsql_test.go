@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/beats/libbeat/common"
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/common"
+	"github.com/rwdial/beats/libbeat/logp"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/elastic/beats/packetbeat/protos"
-	"github.com/elastic/beats/packetbeat/publish"
+	"github.com/rwdial/beats/packetbeat/protos"
+	"github.com/rwdial/beats/packetbeat/publish"
 )
 
 func PgsqlModForTests() *Pgsql {

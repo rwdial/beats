@@ -6,9 +6,9 @@ import (
 	"github.com/garyburd/redigo/redis"
 	"github.com/urso/ucfg"
 
-	"github.com/elastic/beats/libbeat/logp"
+	"github.com/rwdial/beats/libbeat/logp"
 
-	"github.com/elastic/beats/metricbeat/helper"
+	"github.com/rwdial/beats/metricbeat/helper"
 )
 
 func init() {

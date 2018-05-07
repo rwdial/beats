@@ -17,13 +17,13 @@ packetbeat topbeat filebeat metricbeat winlogbeat: build/upload
 		-before-build=../xgo-scripts/before_build.sh \
 		-pkg $@ \
 		-source ../../.. \
-		github.com/elastic/beats
+		github.com/rwdial/beats
 	# linux builds on debian 6
 	cd build && xgo -image=tudorg/beats-builder-deb6 \
 		-before-build=../xgo-scripts/before_build.sh \
 		-pkg $@ \
 		-source ../../.. \
-		github.com/elastic/beats
+		github.com/rwdial/beats
 
 include ./scripts/Makefile
 

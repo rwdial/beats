@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/elastic/beats/filebeat/config"
-	"github.com/elastic/beats/filebeat/harvester/encoding"
-	"github.com/elastic/beats/filebeat/input"
+	"github.com/rwdial/beats/filebeat/config"
+	"github.com/rwdial/beats/filebeat/harvester/encoding"
+	"github.com/rwdial/beats/filebeat/input"
 )
 
 type Harvester struct {
