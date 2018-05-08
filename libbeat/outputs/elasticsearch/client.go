@@ -193,7 +193,7 @@ func bulkEncodePublishRequest(
 	return okEvents
 }
 
-func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteColumn string, doDeleteValue string, event common.MapStr) bulkMeta {
+func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteColumn string, doDeleteValue string, event common.MapStr) interface{} {
 
 	index = getIndex(event, index, includeDatestamp)
 
@@ -210,7 +210,7 @@ func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteC
 	}
 
 	if deleteColumn != "" && event[deleteColumn].(string) == doDeleteValue {
-		meta := bulkMeta{
+		meta := bulkDeleteMeta{
 			Delete: metaIndex,
 		}
 		return meta
