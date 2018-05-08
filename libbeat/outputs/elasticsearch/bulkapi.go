@@ -3,6 +3,7 @@ package elasticsearch
 import (
 	"bytes"
 	"encoding/json"
+	"reflect"
 
 	"github.com/rwdial/beats/libbeat/logp"
 )
@@ -44,8 +45,11 @@ func (r *bulkRequest) Send(meta, obj interface{}) error {
 	if err = r.enc.Encode(meta); err != nil {
 		return err
 	}
-	if err = r.enc.Encode(obj); err != nil {
-		r.buf.Truncate(pos) // remove meta object from buffer
+	var indexMeta bulkMeta
+	if reflect.TypeOf(meta) == reflect.TypeOf(indexMeta) {
+		if err = r.enc.Encode(obj); err != nil {
+			r.buf.Truncate(pos) // remove meta object from buffer
+		}
 	}
 	return err
 }
