@@ -32,6 +32,7 @@ type Client struct {
 	index            string
 	idColumn         string
 	deleteColumn     string
+	doDeleteValue    string
 	includeDatestamp bool
 	params           map[string]string
 
@@ -61,7 +62,7 @@ var (
 )
 
 func NewClient(
-	esURL, index string, includeDatestamp bool, idColumn string, deleteColumn string, proxyURL *url.URL, tls *tls.Config,
+	esURL, index string, includeDatestamp bool, idColumn string, deleteColumn string, doDeleteValue string, proxyURL *url.URL, tls *tls.Config,
 	username, password string,
 	params map[string]string,
 ) *Client {
@@ -87,6 +88,7 @@ func NewClient(
 		includeDatestamp: includeDatestamp,
 		idColumn:         idColumn,
 		deleteColumn:     deleteColumn,
+		doDeleteValue:    doDeleteValue,
 	}
 	return client
 }
@@ -130,7 +132,13 @@ func (client *Client) PublishEvents(
 
 	// encode events into bulk request buffer, dropping failed elements from
 	// events slice
-	events = bulkEncodePublishRequest(request, client.index, client.includeDatestamp, client.idColumn, client.deleteColumn, events)
+	events = bulkEncodePublishRequest(request,
+		client.index,
+		client.includeDatestamp,
+		client.idColumn,
+		client.deleteColumn,
+		client.doDeleteValue,
+		events)
 	if len(events) == 0 {
 		return nil, nil
 	}
@@ -168,11 +176,12 @@ func bulkEncodePublishRequest(
 	includeDatestamp bool,
 	idColumn string,
 	deleteColumn string,
+	doDeleteValue string,
 	events []common.MapStr,
 ) []common.MapStr {
 	okEvents := events[:0]
 	for _, event := range events {
-		meta := eventBulkMeta(index, includeDatestamp, idColumn, deleteColumn, event)
+		meta := eventBulkMeta(index, includeDatestamp, idColumn, deleteColumn, doDeleteValue, event)
 		err := requ.Send(meta, event)
 		if err != nil {
 			logp.Err("Failed to encode event: %s", err)
@@ -184,7 +193,7 @@ func bulkEncodePublishRequest(
 	return okEvents
 }
 
-func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteColumn string, event common.MapStr) bulkMeta {
+func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteColumn string, doDeleteValue string, event common.MapStr) bulkMeta {
 
 	index = getIndex(event, index, includeDatestamp)
 
@@ -200,7 +209,7 @@ func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteC
 		ID:      id,
 	}
 
-	if deleteColumn != "" && event[deleteColumn].(bool) {
+	if deleteColumn != "" && event[deleteColumn].(string) == doDeleteValue {
 		meta := bulkMeta{
 			Delete: metaIndex,
 		}
