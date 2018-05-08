@@ -197,7 +197,9 @@ func makeClientFactory(
 			params = nil
 		}
 		client := NewClient(
-			esURL, config.Index, proxyURL, tls,
+			esURL,
+			config.Index, config.IncludeDatestamp, config.IDColumn, config.DeleteColumn, config.DoDeleteValue,
+			proxyURL, tls,
 			config.Username, config.Password,
 			params)
 		return client, nil
