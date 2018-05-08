@@ -29,8 +29,11 @@ var (
 
 type Client struct {
 	Connection
-	index  string
-	params map[string]string
+	index            string
+	idColumn         string
+	deleteColumn     string
+	includeDatestamp bool
+	params           map[string]string
 
 	json jsonReader
 }
@@ -58,7 +61,7 @@ var (
 )
 
 func NewClient(
-	esURL, index string, proxyURL *url.URL, tls *tls.Config,
+	esURL, index string, includeDatestamp bool, idColumn string, deleteColumn string, proxyURL *url.URL, tls *tls.Config,
 	username, password string,
 	params map[string]string,
 ) *Client {
@@ -79,8 +82,11 @@ func NewClient(
 				},
 			},
 		},
-		index:  index,
-		params: params,
+		index:            index,
+		params:           params,
+		includeDatestamp: includeDatestamp,
+		idColumn:         idColumn,
+		deleteColumn:     deleteColumn,
 	}
 	return client
 }
@@ -124,7 +130,7 @@ func (client *Client) PublishEvents(
 
 	// encode events into bulk request buffer, dropping failed elements from
 	// events slice
-	events = bulkEncodePublishRequest(request, client.index, events)
+	events = bulkEncodePublishRequest(request, client.index, client.includeDatestamp, client.idColumn, client.deleteColumn, events)
 	if len(events) == 0 {
 		return nil, nil
 	}
@@ -159,11 +165,14 @@ func (client *Client) PublishEvents(
 func bulkEncodePublishRequest(
 	requ *bulkRequest,
 	index string,
+	includeDatestamp bool,
+	idColumn string,
+	deleteColumn string,
 	events []common.MapStr,
 ) []common.MapStr {
 	okEvents := events[:0]
 	for _, event := range events {
-		meta := eventBulkMeta(index, event)
+		meta := eventBulkMeta(index, includeDatestamp, idColumn, deleteColumn, event)
 		err := requ.Send(meta, event)
 		if err != nil {
 			logp.Err("Failed to encode event: %s", err)
@@ -175,16 +184,31 @@ func bulkEncodePublishRequest(
 	return okEvents
 }
 
-func eventBulkMeta(index string, event common.MapStr) bulkMeta {
+func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteColumn string, event common.MapStr) bulkMeta {
 
-	index = getIndex(event, index)
-	id := event["appraisalGuid"].(string)
+	index = getIndex(event, index, includeDatestamp)
+
+	var id = ""
+
+	if idColumn != "" {
+		id = event[idColumn].(string)
+	}
+
+	metaIndex := bulkMetaIndex{
+		Index:   index,
+		DocType: event["type"].(string),
+		ID:      id,
+	}
+
+	if deleteColumn != "" && event[deleteColumn].(bool) {
+		meta := bulkMeta{
+			Delete: metaIndex,
+		}
+		return meta
+	}
+
 	meta := bulkMeta{
-		Index: bulkMetaIndex{
-			Index:   index,
-			DocType: event["type"].(string),
-			ID:      id,
-		},
+		Index: metaIndex,
 	}
 	return meta
 }
@@ -192,10 +216,7 @@ func eventBulkMeta(index string, event common.MapStr) bulkMeta {
 // getIndex returns the full index name
 // Index is either defined in the config as part of the output
 // or can be overload by the event through setting index
-func getIndex(event common.MapStr, index string) string {
-
-	//ts := time.Time(event["@timestamp"].(common.Time)).UTC()
-
+func getIndex(event common.MapStr, index string, includeDatestamp bool) string {
 	// Check for dynamic index
 	if _, ok := event["beat"]; ok {
 		beatMeta := event["beat"].(common.MapStr)
@@ -207,9 +228,13 @@ func getIndex(event common.MapStr, index string) string {
 
 	// TODO: update index with companyId from event["companyId"].(int64) to separate company indexes
 
-	// Append timestamp to index
-	// index = fmt.Sprintf("%s-%d.%02d.%02d", index,
-	// 	ts.Year(), ts.Month(), ts.Day())
+	if includeDatestamp {
+		ts := time.Time(event["@timestamp"].(common.Time)).UTC()
+
+		// Append timestamp to index
+		index = fmt.Sprintf("%s-%d.%02d.%02d", index,
+			ts.Year(), ts.Month(), ts.Day())
+	}
 
 	return index
 }
@@ -361,12 +386,18 @@ func (client *Client) PublishEvent(event common.MapStr) error {
 		return ErrNotConnected
 	}
 
-	index := getIndex(event, client.index)
+	index := getIndex(event, client.index, client.includeDatestamp)
 	logp.Debug("output_elasticsearch", "Publish event: %s", event)
+
+	var id = ""
+
+	if client.idColumn != "" {
+		id = event[client.idColumn].(string)
+	}
 
 	// insert the events one by one
 	status, _, err := client.Index(
-		index, event["type"].(string), "", client.params, event)
+		index, event["type"].(string), id, client.params, event)
 	if err != nil {
 		logp.Warn("Fail to insert a single event: %s", err)
 		if err == ErrJSONEncodeFailed {

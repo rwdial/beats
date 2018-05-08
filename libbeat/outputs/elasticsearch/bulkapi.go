@@ -19,7 +19,8 @@ type bulkRequest struct {
 }
 
 type bulkMeta struct {
-	Index bulkMetaIndex `json:"index"`
+	Index  bulkMetaIndex `json:"index"`
+	Delete bulkMetaIndex `json:"delete"`
 }
 
 type bulkMetaIndex struct {
