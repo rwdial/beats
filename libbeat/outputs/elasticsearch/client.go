@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"os"
 	"time"
 
 	"github.com/dustin/go-humanize"
@@ -209,7 +210,8 @@ func eventBulkMeta(index string, includeDatestamp bool, idColumn string, deleteC
 		ID:      id,
 	}
 
-	if deleteColumn != "" && event[deleteColumn].(string) == doDeleteValue {
+	// TODO : Verify delete
+	if deleteColumn != "" && fmt.Sprintf("%v", event[deleteColumn]) == doDeleteValue {
 		meta := bulkDeleteMeta{
 			Delete: metaIndex,
 		}
@@ -549,6 +551,7 @@ func (conn *Connection) execRequest(
 		conn.connected = false
 		return status, nil, err
 	}
+	os.Stdout.WriteString(string(obj))
 	return status, obj, nil
 }
 
